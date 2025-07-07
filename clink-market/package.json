@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "eslint --ext .ts, .",
-    "lint:fix": "eslint --fix --ext .ts, ."
+    "lint:fix": "eslint --fix --ext .ts, .",
+    "prepare": "cd .. && husky clink-market/.husky",
+    "precommit": "npm run lint"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +34,7 @@
     "eslint": "^8.57.1",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.7",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
